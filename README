@@ -1,0 +1,10 @@
+# advent of code 2024
+
+this repo contains my solutions for advent of code 2024, written in go.
+
+## structure
+
+each day's solution(s) is in its own folder, named `day1`, `day2`, etc. 
+
+each folder contains a `main.go` file that contains the solution(s) for the day, and a `input.txt` file that contains the input for the day.
+

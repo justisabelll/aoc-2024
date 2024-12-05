@@ -1,17 +1,17 @@
 package main
 
 import (
+	"aoc-2024/utils"
 	"fmt"
 	"log"
 	"math"
-	"os"
 	"slices"
 	"strconv"
 	"strings"
 )
 
 
-func cleanInput(i string) ([]int, []int) {
+func splitInput(i string) ([]int, []int) {
 	a := strings.Fields(i)
 	var leftArr []int
 	var rightArr []int
@@ -32,21 +32,10 @@ func cleanInput(i string) ([]int, []int) {
 	return leftArr, rightArr
 }
 
-func getInput() string {
-	data, err := os.ReadFile("input.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	return string(data)
-
-}
-
 func main() {
+	input := utils.GetInput(false)
 
-	input := getInput()
-
-	left, right := cleanInput(input)
+	left, right := splitInput(input)
 
 	slices.Sort(left)
 	slices.Sort(right)
